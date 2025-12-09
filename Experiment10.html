@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEase - Responsive Navbar</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+
+    nav {
+        background: #222;
+        color: white;
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+
+    .menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .actions {
+        display: flex;
+        gap: 15px;
+        cursor: pointer;
+    }
+
+    /* HAMBURGER CHECKBOX HACK */
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* MOBILE STYLES */
+    @media (max-width: 768px) {
+        .menu {
+            display: none;
+            position: absolute;
+            top: 55px;
+            left: 0;
+            width: 100%;
+            background: #333;
+            padding: 20px 0;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .menu a {
+            padding: 10px 0;
+            display: block;
+        }
+
+        /* Show menu when checked */
+        #menu-toggle:checked + .hamburger + .menu {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">ShopEase</div>
+
+    <!-- CHECKBOX HACK -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">☰</label>
+
+    <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Categories</a>
+        <a href="#">Deals</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="actions">
+        <span>Cart 🛒</span>
+        <span>Login</span>
+    </div>
+</nav>
+
+<section style="padding: 20px;">
+    <h2>Welcome to ShopEase!</h2>
+    <p>Your one-stop destination for all shopping needs.</p>
+</section>
+
+
+     <div style=" text-align: center; font-weight: bold; color: red;"> ANUJ YADAV &hearts; 2025B01010460</div>
+
+</body>
+</html>
